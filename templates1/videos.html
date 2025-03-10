@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Video Lectures</title>
+</head>
+<body>
+    <h1>Video Lectures</h1>
+    <ul>
+        {% for video in videos %}
+        <li>
+            <a href="{{ video.url }}" target="_blank">{{ video.title }}</a>
+            {% if video.id in completed %}
+                <span>✔ Completed</span>
+            {% else %}
+                <button onclick="markCompleted('{{ video.id }}')">Mark as Completed</button>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <script>
+        function markCompleted(videoId) {
+            fetch('/user/mark_completed', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ video_id: videoId })
+            }).then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    location.reload();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
