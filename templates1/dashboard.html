@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card-wrapper">
+
+  <div class="card">
+    <h1 class="center">Dashboard</h1>
+    <p class="center">You are currently logged in.</p>
+    <div class="center">
+      <a href="/user/signout" class="btn btn--secondary">Sign Out</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="center">Student Info</h2>
+    <img src="{{ session['student']['profile_picture'] }}" alt="Profile Picture" width="100">
+    
+    <p>
+      <strong>ID/Roll Number:</strong> {{ session['student']['roll_number'] }}<br>
+      <strong>Name:</strong> {{ session['student']['name'] }}<br>
+      <strong>Age:</strong> {{ session['student']['age'] }}<br>
+      <strong>Email:</strong> {{ session['student']['email'] }}
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 class="center">Video Lessons Watched</h2>
+    <ul>
+      {% for lesson in session['student']['video_lessons'] %}
+        <li>
+          {{ lesson['title'] }} - 
+          {% if lesson['completed'] %}
+            ✅ Completed
+          {% else %}
+            ❌ Not Completed
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>
+{% endblock %}
