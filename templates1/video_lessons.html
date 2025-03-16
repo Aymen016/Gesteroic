@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="title">Video Lessons</h2>
+    
+    {% if videos %}
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Course Name</th>
+                    <th>Video</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for video in videos %}
+                <tr>
+                    <td>{{ video.topic }}</td>
+                    <td>{{ video.course_name }}</td>
+                    <td>
+                        <p>Video URL: {{ video.video_url }}</p> <!-- Debug line -->
+                        <video width="200" controls>
+                            <source src="{{ video.video_url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No video lessons available.</p>
+    {% endif %}
+</div>
+
+<style>
+    .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: white;
+        border-radius: 10px;
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        color: white;
+    }
+</style>
+{% endblock %}
