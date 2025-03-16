@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="../static/assets/img/favicon.png" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="../static/assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="../static/assets/css/styles2.css">
+
+        <title>GESTEROIC</title>
+        <style>
+            .buttons {
+            display: flex;
+            gap: 10px;
+        }
+         .buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        .buttons a:hover {
+            background-color: #0056b3;
+        }
+            .footer {
+            background-color: #3ec08e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer__container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer__data {
+            margin: 10px;
+        }
+        .footer__data h3 {
+            margin-bottom: 10px;
+        }
+        .footer__data ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer__data ul li {
+            margin: 5px 0;
+        }
+        .footer__data a {
+            text-decoration: none;
+            color: white;
+        }
+        .footer__data a:hover {
+            text-decoration: underline;
+        }
+        .footer__rights p{
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">GESTEROIC</a>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/lesson" class="nav__link">About Us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/main" class="nav__link">avatar</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#place" class="nav__link">Places</a>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="/home">Signup</a>
+                        <a href="/home">Login</a>
+                    </div>
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="static/assets/img/deaf.png" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle"></span>
+                        <h1 class="home__data-title">Breaking  <br> Barriers <b> Sign Language <br> for Everyone</b></h1>
+                       
+
+                    </div>
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link" style="font-size: 30px;">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link" style="font-size: 30px;">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link" style="font-size: 30px;">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+                    
+            </section>
+            <!--==================== ABOUT ====================-->
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">Did You Know? <br> Over 5 Million People in Pakistan Are Deaf!</h2>
+                        <p class="about__description">Pakistan is home to a vibrant and growing deaf community, with over 5 million individuals facing challenges in accessing education, communication, and resources. At GESTEROIC, we are committed to empowering the deaf community by providing a platform to learn Pakistan Sign Language (PSL) and engage with accessible resources, helping bridge the gap to a more inclusive society.
+
+
+                        </p>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="static/assets/img/deaf-education.jpeg" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="static/assets/img/feature2.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== DISCOVER ====================-->
+            <section class="discover section" id="discover">
+                <h2 class="section__title">Why Choose GESTEROIC? <br> <i>Empowering the Deaf community with interactive, accessible learning – anytime, anywhere.</i></h2>
+                
+                <div class="discover__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== DISCOVER 1 ====================-->
+                        <div class="discover__card swiper-slide" style="position: relative; overflow: hidden;">
+                            <img src="static/assets/img/feature1.jpg" alt="" class="discover__img" style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="discover__data" style="position: absolute; bottom: -40px; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.6); padding: 20px; text-align: center; transition: bottom 0.3s ease-in-out;">
+                                <h2 class="discover__title" style="color: #fff; margin: 0;">Empower Classroms with PSL</h2>
+                                <span class="discover__description" style="color: #fff; margin: 0;">15 tours available</span>
+                            </div>
+                        </div>
+                        
+
+                        <!--==================== DISCOVER 2 ====================-->
+                        <div class="discover__card swiper-slide" style="position: relative; overflow: hidden;">
+                            <img src="static/assets/img/feature2.jpg" alt="" class="discover__img" style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="discover__data" style="position: absolute; bottom: -40px; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.6); padding: 20px; text-align: center; transition: bottom 0.3s ease-in-out;">
+                                <h2 class="discover__title" style="color: #fff; margin: 0;">Interactive Interesting Stories</h2>
+                                <span class="discover__description" style="color: #fff; margin: 0;">15 tours available</span>
+                            </div>
+                        </div>
+
+            
+                        <!--==================== DISCOVER 4 ====================-->
+                        <div class="discover__card swiper-slide" style="position: relative; overflow: hidden;">
+                            <img src="static/assets/img/words.jpg" alt="" class="discover__img" style="width: 100%; height: 400px; object-fit: cover;">
+                            <div class="discover__data" style="position: absolute; bottom: -40px; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.6); padding: 20px; text-align: center; transition: bottom 0.3s ease-in-out;">
+                                <h2 class="discover__title" style="color: #fff; margin: 0;">500+ Signs To Learn</h2>
+                                <span class="discover__description" style="color: #fff; margin: 0;">15 tours available</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                <h2 class="section__title">With Our Experience <br> We Will Serve You</h2>
+
+                <div class="experience__container container grid">
+                    <div class="experience__content grid">
+                        <div class="experience__data">
+                            <h2 class="experience__number"> 100+ </h2>
+                            <span class="experience__description">Recorded  <br> Lectures</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number">50+</h2>
+                            <span class="experience__description">Engaging Stories  <br>to Learn PSL</span>
+                        </div>
+
+                        <div class="experience__data">
+                            <h2 class="experience__number"> 24/7</h2>
+                            <span class="experience__description">Access to <br>Learning Resources</span>
+                        </div>
+                    
+                    </div>
+
+                    <div class="experience__img grid">
+                        <div class="experience__overlay">
+                            <img src="static/assets/img/support.png" alt="" class="experience__img-one" style="width: 270px; height: 300px;">
+                        </div>
+                        <div class="experience__overlay">
+                            <img src="static/assets/img/work.png" alt="" class="experience__img-two "style="width: 500px; height: 400px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Our Mission: Empowering the Deaf with PSL</h2>
+
+                <div class="video__container container">
+                    <p class="video__description">At GESTEROIC, we believe language is a bridge, not a barrier. We’re committed to making Pakistan Sign Language (PSL) accessible to all, helping the Deaf community connect, learn, and thrive.
+
+                       <br> Join us today—and let's break barriers, one sign at a time.
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="../static/assets/video/cat.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place">
+                <h2 class="section__title">Choose Your Way to Master PSL </h2>
+
+                <div class="place__container container grid">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <div class="place__card">
+                        <img src="static/assets/img/team.png" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title"></h3>
+                                <span class="place__subtitle"></span>
+                                <span class="place__price"></span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <div class="place__card">
+                        <img src="static/assets/img/podcast.png" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">5,0</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title"></h3>
+                                <span class="place__subtitle"></span>
+                                <span class="place__price"></span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <div class="place__card">
+                        <img src="static/assets/img/laptop.png" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,9</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title"></h3>
+                                <span class="place__subtitle"></span>
+                                <span class="place__price"></span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <div class="place__card">
+                        <img src="static/assets/img/recording.png" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title"></h3>
+                                <span class="place__subtitle"></span>
+                                <span class="place__price"></span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <div class="place__card">
+                        <img src="static/assets/img/alphabet.png" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <span class="place__rating">
+                                <i class="ri-star-line place__rating-icon"></i>
+                                <span class="place__rating-number">4,8</span>
+                            </span>
+
+                            <div class="place__data">
+                                <h3 class="place__title"></h3>
+                                <span class="place__subtitle"></span>
+                                <span class="place__price"></span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SUBSCRIBE 
+            <section class="subscribe section">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
+                        <p class="subscribe__description">Subscribe to our newsletter and get a 
+                            special 30% discount.
+                        </p>
+    
+                        <form action="" class="subscribe__form">
+                            <input type="text" placeholder="Enter email" class="subscribe__input">
+    
+                            <button class="button">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="sponsor section">
+                <div class="sponsor__container container grid">
+                    <div class="sponsor__content">
+                        <img src="static/assets/img/sponsors1.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="static/assets/img/sponsors2.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="static/assets/img/sponsors3.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="static/assets/img/sponsors4.png" alt="" class="sponsor__img">
+                    </div>
+                    <div class="sponsor__content">
+                        <img src="static/assets/img/sponsors5.png" alt="" class="sponsor__img">
+                    </div>
+                </div>
+            </section>
+        </main> 
+    -->
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__data">
+                    <h3>GESTEROIC</h3>
+                    <p>Your choice, your experience.</p>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+                        <a href="https://twitter.com/" target="_blank">Twitter</a> |
+                        <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+                        <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer__data">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">News & Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer__data">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Plans & Pricing</a></li>
+                        <li><a href="#">Join Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__data">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__rights">
+                <p>&#169; 2025 GESTEROIC. All rights reserved.</p>
+                
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="static/assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="static/assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="static/assets/js/main.js"></script>
+    </body>
+</html>
