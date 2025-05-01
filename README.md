@@ -14,11 +14,11 @@
 ## 📸 Screenshots
 
 ### 👨‍🏫 Admin Dashboard
-![Admin Dashboard]![image](https://github.com/user-attachments/assets/dfacc28c-29f2-41a7-a54a-e96042aa7322)
+![Admin Dashboard](https://github.com/user-attachments/assets/dfacc28c-29f2-41a7-a54a-e96042aa7322)
 
 
 ### 📚 Course and Lectures View
-![Courses Page]![image](https://github.com/user-attachments/assets/0132ef95-d7bc-4838-9427-1f0a4acfa459)
+![Courses Page](https://github.com/user-attachments/assets/0132ef95-d7bc-4838-9427-1f0a4acfa459)
 
 
 ### 👨‍🎓 Student Dashboard
