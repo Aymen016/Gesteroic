@@ -5,23 +5,26 @@
 ## 🌐 Live Preview
 
 🚀 [Visit GESTEROIC (Demo Link)](https://your-deployment-link.com)  
-📽️ [Project Walkthrough Video](https://www.youtube.com/watch?v=your_demo_video_link)
+📽️ [Project Walkthrough Video](https://github.com/user-attachments/assets/5ce321f4-1326-4d82-80eb-98ff36ae12e4)
+
+
 
 ---
 
 ## 📸 Screenshots
 
 ### 👨‍🏫 Admin Dashboard
-![Admin Dashboard](screenshots/admin_dashboard.png)
+![Admin Dashboard]![image](https://github.com/user-attachments/assets/dfacc28c-29f2-41a7-a54a-e96042aa7322)
+
 
 ### 📚 Course and Lectures View
-![Courses Page](screenshots/courses_page.png)
+![Courses Page]![image](https://github.com/user-attachments/assets/0132ef95-d7bc-4838-9427-1f0a4acfa459)
+
 
 ### 👨‍🎓 Student Dashboard
-![Student Dashboard](screenshots/student_dashboard.png)
+![Student Dashboard](https://github.com/user-attachments/assets/3a97d135-b165-49ac-8364-85720faa9518)
 
-### 🤲 SignHub Crowdsourcing Platform
-![SignHub](screenshots/signhub.png)
+
 
 ---
 
@@ -44,10 +47,7 @@
 - View platform stats: total users, total courses, lectures, quizzes
 - Manage teacher assignments
 
-### 🤲 SignHub - Gesture Crowdsourcing
-- Upload sign language gesture videos
-- View community submissions
-- Encourage collaborative learning
+
 
 ---
 
