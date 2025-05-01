@@ -124,3 +124,31 @@ Then open http://localhost:5000 in your browser.
 - 🏆 **Gamification features** such as badges and leaderboards  
 ---
 
+## 🙌 Contributing
+
+We welcome community contributions to **GESTEROIC** and overall platform improvement!  
+Feel free to **fork the repo** and **raise a pull request** 🚀
+
+---
+
+## 🧾 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🧑‍🎓 Credits
+
+- **Aymen** – Developer & Designer  
+- **PUCIT** – Final Year Project Support  
+- **OpenAI & DeepLearning.AI** – Prompt Engineering, LangChain Skills  
+- **MongoDB Atlas** – Cloud Database Hosting  
+- **YouTube** – Video Hosting for Lectures  
+
+---
+
+## 📬 Contact
+
+- 📧 **Email:** ayemenbaig26@gmail.com  
+- 🌐 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/) *(Update with your actual link)*
+
