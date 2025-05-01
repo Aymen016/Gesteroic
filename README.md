@@ -115,4 +115,12 @@ python app.py
 ```
 Then open http://localhost:5000 in your browser.
 
+---
+## 🧠 Future Enhancements
+
+- 🎥 **Live video signing practice** via webcam  
+- 🌍 **Multilingual sign language support** (e.g., ASL, BSL)  
+- 🤖 **AI sign recognition** using OpenCV & MediaPipe  
+- 🏆 **Gamification features** such as badges and leaderboards  
+---
 
