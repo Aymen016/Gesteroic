@@ -100,5 +100,19 @@ cd gesteroic
 python -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 ```
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### 4. Set Up MongoDB
+Create a MongoDB Atlas account and set your connection string in app.py:
+```python
+client = MongoClient("your_mongodb_uri")
+```
+### 5. Run the App
+```bash
+python app.py
+```
+Then open http://localhost:5000 in your browser.
 
 
