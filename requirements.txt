@@ -1,0 +1,6 @@
+Flask
+pymongo
+bcrypt
+dnspython
+Pillow
+Werkzeug==2.0.1 
