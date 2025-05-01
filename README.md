@@ -85,3 +85,20 @@ gesteroic/
 ├── db_config.py
 ├── requirements.txt
 └── README.md
+```
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repo
+```bash
+git clone https://github.com/your-username/gesteroic.git
+cd gesteroic
+```
+### 2. Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+
