@@ -58,11 +58,20 @@
 
 ### 🌟 Features:
 - ✅ **Sign Up & Login**: Secure access to the teacher dashboard.
-- ➕ **Add Courses**: Create new sign language-supported courses with titles and descriptions.
-- 🎬 **Upload Lectures**: Add video lessons with simplified educational content.
+  ![image](https://github.com/user-attachments/assets/a2cf7095-45bd-4581-8572-963c04bd07b9)
+![image](https://github.com/user-attachments/assets/aae85d58-2480-4a65-8faa-e21ade76ff72)
+
+- ✏️ **Dashboard**: Manage course content with full control.
+![image](https://github.com/user-attachments/assets/08cc9a3e-3a0f-4d3a-a031-1c84b023d59d)
+
 - ❓ **Create Quizzes**: Design custom quizzes with multiple-choice questions.
+  ![image](https://github.com/user-attachments/assets/ed9e5b21-8195-4b78-8765-f1f8021a9eab)
+
 - 📈 **View Student Submissions**: Check quiz participation and student understanding.
-- ✏️ **Update or Delete Content**: Manage course content with full control.
+  ![image](https://github.com/user-attachments/assets/27ee9a0d-e93e-4819-98cb-9f09a98f4ec7)
+
+- 🎬 **Upload Lectures**: Add video lessons with simplified educational content.
+![image](https://github.com/user-attachments/assets/96a47fd1-f18a-403f-bd83-225f134e600e)
 
 ---
 
@@ -75,6 +84,8 @@
   - Total Courses
   - Total Lectures
   - Total Quizzes
+- ➕ **Add Courses**: Create new sign language-supported courses with titles and descriptions.
+
 - ➕ **Add Courses & Lectures**: Full control to manage educational content.
 - 📁 **Manage Users**: View, update, or remove student and teacher accounts.
 - 🔒 **Content Moderation**: Ensure all uploaded material is appropriate and accessible.
