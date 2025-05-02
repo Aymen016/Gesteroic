@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Course</title>
+    <style>
+        body {
+            background-color: #ffe4e1;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #ff6b6b;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .course-description {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .lecture {
+            background: #fff;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff6b6b;
+        }
+
+        h3 {
+            color: #ff6b6b;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        a {
+            color: #ff6b6b;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff4040;
+        }
+    </style>
+</head>
+<body>
+
+<h1>{{ course['course_name'] }}</h1>
+<p class="course-description">{{ course['description'] }}</p>
+
+<h3>Lectures:</h3>
+{% for lecture in lectures %}
+    <div class="lecture">
+        <h4>{{ lecture['lecture_title'] }}</h4>
+        <p>{{ lecture['description'] }}</p>
+        <a href="{{ lecture['lecture_video_url'] }}" target="_blank">Watch on YouTube</a>
+    </div>
+{% endfor %}
+
+</body>
+</html>

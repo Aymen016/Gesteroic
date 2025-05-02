@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ course['course_name'] }} - Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f8fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #4c6ef5;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .question-card h3 {
+            color: #333;
+        }
+
+        .options {
+            margin-top: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            background: #4c6ef5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background: #3b5bdb;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 20px;
+            color: #4c6ef5;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>{{ course['course_name'] }} - Quiz</h1>
+    <p>Good luck! Answer all the questions below. Total Questions: {{ question_count }}</p>
+</header>
+
+<div class="container">
+    <form method="POST">
+        {% for question in questions %}
+            <div class="question-card">
+                <h3>{{ question['question'] }}</h3>
+                <div class="options">
+                    {% for option in question['options'] %}
+                        <label>
+                            <input type="radio" name="q{{ question['_id'] }}" value="{{ option }}">
+
+                            {{ option }}
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        <button type="submit" class="submit-btn">Submit Quiz</button>
+    </form>
+
+</div>
+
+</body>
+
+</html>

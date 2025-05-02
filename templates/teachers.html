@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Teachers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Apply a linear gradient background */
+        body {
+            background: linear-gradient(to right, #004356, #0c95a4);
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Enhance heading */
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* Style the teacher list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .teacher-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .teacher-item:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Style the teacher name and course */
+        .teacher-name {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .course-name {
+            color: #100606;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Space between name and course */
+        .teacher-name + .course-name {
+            margin-top: 15px;
+        }
+
+        /* Add spacing and margins */
+        .container {
+            padding: 20px;
+        }
+
+        /* Style for 'See More' link */
+        .see-more {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0d0404;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid #08272c;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .see-more:hover {
+            background-color: #004356;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Teachers and Their Courses</h2>
+
+        <ul>
+            {% for teacher in teachers %}
+                <li class="teacher-item">
+                    <span class="teacher-name">{{ teacher.name }}</span>
+                    <span class="course-name">Teaches: {{ teacher.course_name }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-- See More link -->
+        <a href="/courses" class="see-more">See More Courses</a>
+    </div>
+
+</body>
+</html>

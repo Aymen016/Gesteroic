@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - LearnWithSigns</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #f9d423, #ff4e50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 800px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .signup-image {
+            flex: 1;
+            background-image: url('/static/images/gesteroic-logo.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .signup-form {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .signup-form h2 {
+            margin-bottom: 20px;
+            color: #ff4e50;
+        }
+
+        .signup-form input {
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .signup-form button {
+            padding: 12px;
+            background-color: #ff4e50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .signup-form button:hover {
+            background-color: #e43c3c;
+        }
+
+        .signup-form a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .signup-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+   <div class="signup-container">
+    <div class="signup-image"></div>
+    <div class="signup-form">
+        <h2>Create Your Account</h2>
+        <form method="POST" action="/signup" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <!-- Profile picture upload field -->
+            <label for="profile-pic">Upload Profile Picture:</label>
+            <input type="file" name="profile_pic" id="profile-pic" accept="image/*" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <a href="/login">Already have an account? Log in</a>
+    </div>
+</div>
+
+</body>
+</html>

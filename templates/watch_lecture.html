@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch Lecture - {{ lecture['lecture_title'] }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #7F00FF, #E100FF);
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4a90e2;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .back-btn {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+        .back-btn:hover {
+            text-decoration: underline;
+            background-color: #d3e0ea;
+        }
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>{{ lecture['lecture_title'] }}</h1>
+    <p>{{ lecture['description'] }}</p>
+
+    <!-- Embed YouTube Video -->
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/{{ lecture['lecture_video_url'].split('/')[-1] }}" 
+        title="{{ lecture['lecture_title'] }}" 
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+
+    <!-- Back to course page button -->
+    <a href="{{ url_for('view_course', course_id=lecture['course_id']) }}" class="back-btn">Back to Course</a>
+</div>
+
+</body>
+</html>

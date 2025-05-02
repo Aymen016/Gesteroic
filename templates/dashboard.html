@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Deaf Learning Platform</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #4F46E5;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-top: 10px;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .course-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .course-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .course-card h3 {
+            color: #4F46E5;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            color: #555;
+            font-size: 14px;
+            min-height: 50px;
+        }
+
+        .course-card a,
+        .course-card button {
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .view-btn {
+            background-color: #1e90ff;
+            color: white;
+        }
+
+        .enroll-btn {
+            background-color: #22c55e;
+            color: white;
+            border: none;
+            margin-left: 10px;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-home a {
+            padding: 12px 24px;
+            background-color: #6366F1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+            .course-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome, {{ student['username'] }}</h1>
+        <img src="{{ url_for('static', filename='uploads/' + student.profile_pic) }}" alt="Profile Picture">
+
+   
+
+       </header>
+
+    <main>
+        <h2>Available Courses</h2>
+        <section class="course-grid">
+            {% for course in courses %}
+                <div class="course-card">
+                    <h3>{{ course['course_name'] }}</h3>
+                    <p>{{ course['description'][:100] if course['description'] else 'No description available.' }}...</p>
+                    <div>
+                        <a href="{{ url_for('view_course', course_id=course['_id']) }}" class="view-btn">View</a>
+                        <form method="POST" action="{{ url_for('enroll_course', course_id=course['_id']) }}" style="display:inline;">
+                            <button type="submit" class="enroll-btn">Enroll</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+
+        <div class="back-home">
+            <a href="{{ url_for('student_home') }}">📚 Go to My Learning Home</a>
+        </div>
+    </main>
+
+</body>
+</html>

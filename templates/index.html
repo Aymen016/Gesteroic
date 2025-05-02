@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Scholar - Online School HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap CSS -->
+<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-scholar.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+
+<!-- External CDN (remains the same) -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+<!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <h1>GESTEROIC</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Serach Start ***** -->
+                    
+                    <!-- ***** Serach Start ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                      <li class="scroll-to-section"><a href="/login" >Login</a></li>
+                      <li class="scroll-to-section"><a href="#services">Services</a></li>
+                      <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+                      <li class="scroll-to-section"><a href="#team">Testimonals</a></li>
+                      <li class="scroll-to-section"><a href="#events">Contact Us</a></li>
+                      <li class="scroll-to-section"><a href="/signup">Signup Now!</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-banner">
+            <div class="item item-1">
+              <div class="header-text">
+                <span class="category">Our Courses</span>
+                <h2>With Gesteroic, Learning Through Sign Language Becomes Effortless</h2>
+                
+              </div>
+            </div>
+            <div class="item item-2">
+              <div class="header-text">
+                <span class="category">Best Result</span>
+                <h2>Together We Break Communication Barriers.              </h2>
+                
+              </div>
+            </div>
+            <div class="item item-3">
+              <div class="header-text">
+                <span class="category">Online Learning</span>
+                <h2>Education for the Deaf, Powered by Gestures.</h2>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="services section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='assets/images/service-01.png') }}" alt="online degrees">
+            </div>
+            <div class="main-content">
+              <h4>Online Courses</h4>
+              <p>Start learning Pakistan Sign Language with our easy, flexible, and visual courses tailored for the deaf community.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='assets/images/service-02.png') }}" alt="short courses">
+            </div>
+            <div class="main-content">
+              <h4>PSL Stories</h4>
+              <p>Watch inspiring short stories told in Pakistan Sign Language that teach values, culture, and daily communication.</p>
+              <div class="main-button">
+                <a href="/stories">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+                <img src="{{ url_for('static', filename='assets/images/service-03.png') }}" alt="web experts">
+            </div>
+            <div class="main-content">
+              <h4>PSL Dictionary</h4>
+              <p>Understand every sign, anytime – with the PSL Dictionary built into Gesteroic.</p>
+              <div class="main-button">
+                <a href="#">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-1">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    How Can Gesteroic Help the Deaf Community?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Gesteroic makes PSL learning easy and visual through animated avatars, helping the deaf community learn independently and connect better with others.
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Who Can Use Gesteroic?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Anyone! Deaf individuals, families, teachers, and learners of all kinds can use Gesteroic to learn and communicate in PSL.
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What Makes Gesteroic Different?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    It offers animated lessons, a PSL dictionary, stories, quizzes, and progress tracking — all tailored for the Pakistani deaf community.                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Can I Track My Learning Progress?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    Yes, you can track completed lessons, quiz scores, and earn certificates as you learn.
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>About Us</h6>
+            <h2>What make us the best academy online?</h2>
+            <h4>About PSL</h4>
+            <p>For the first time in Pakistan, Gesteroic brings a rich collection of Pakistan Sign Language learning resources to your fingertips! Powered by animated avatars that demonstrate each sign, our platform is designed for deaf students, their families, educators, and anyone eager to learn a powerful and expressive language. Gesteroic makes learning PSL easy, visual, and engaging for everyone.</p>
+                        <div class="main-button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section courses" id="courses" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Latest Courses</h6>
+            <h2>Latest Courses</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row event_box">
+        <div class="col-lg-6 col-md-6 align-self-center mb-30 event_outer design">
+            <div class="events_item">
+            <div class="thumb">
+                <a href="#"><img src="{{ url_for('static', filename='assets/images/course-01.jpg') }}" alt="course image"></a>
+                <span class="category">English</span>
+              <span class="price"><h6><em>$</em>20</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Rabia Nadeem</span>
+              <h4>Learn English</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 align-self-center mb-30 event_outer design">
+            <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="{{ url_for('static', filename='assets/images/course-02.jpg') }}" alt=""></a>
+              <span class="category">Computer Science</span>
+              <span class="price"><h6><em>$</em>30</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Bushra Shahbaz</span>
+              <h4>Computer Science Knowledge</h4>
+            </div>
+          </div>
+        </div>
+       
+        
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="section fun-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
+                   <p class="count-text ">Happy Students</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
+                  <p class="count-text ">Course Hours</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="30" data-speed="1000"></h2>
+                  <p class="count-text ">Enrolled Students</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter end">
+                  <h2 class="timer count-title count-number" data-to="5" data-speed="1000"></h2>
+                  <p class="count-text ">Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section testimonials" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="owl-carousel owl-testimonials">
+            <div class="item">
+                <p>“Gesteroic is a game-changer for inclusive education. The use of avatars to teach Pakistan Sign Language is not only innovative but truly empowering for our deaf students.”</p>
+
+              <div class="author">
+                <img src="{{ url_for('static', filename='assets/images/member-03.jpg ') }}" alt="">
+                <span class="category">Special Education Teacher</span>
+                <h4>Mr. Haider Manzoor</h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>“As a parent of a deaf child, Gesteroic has been a blessing. It helps us learn PSL together in a fun and easy way. My child is more confident than ever.”</p>
+              <div class="author">
+                <img src="{{ url_for('static', filename='assets/images/member-01.jpg ') }}" alt="">
+                <span class="category">Parent of a Deaf Student</span>
+                <h4>Ms. Faiza Malik</h4>
+              </div>
+            </div>
+            <div class="item">
+              <p>“I love learning from the avatars on Gesteroic! The signs are clear, and the quizzes help me remember everything. It's the best way to learn PSL!”</p>
+              <div class="author">
+                <img src="{{ url_for('static', filename='assets/images/testimonial-author.jpg ') }}" alt="">
+                <span class="category">Deaf Student</span>
+                <h4>Fatima Gul</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <h6>TESTIMONIALS</h6>
+            <h2>What they say about us?</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  align-self-center">
+          <div class="section-heading">
+            <h6>Contact Us</h6>
+            <h2>Feel free to contact us anytime</h2>
+           <p> Feel free to reach out to us anytime — we're here to support your learning journey with Gesteroic!</p>            <div class="special-offer">
+              <span class="offer">off<br><em>50%</em></span>
+              <h6>Valide: <em>24 May 2036</em></h6>
+              <h4>Special Offer <em>50%</em> OFF!</h4>
+              <a href="/signup"><i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <form id="contact-form" action="" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2024 GESTEROIC. All rights reserved. &nbsp;&nbsp;&nbsp; </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/isotope.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/owl-carousel.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/counter.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+
+
+  </body>
+</html>

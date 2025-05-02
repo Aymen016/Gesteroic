@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enrolled Students</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #001f3d, #003366);
+      color: white;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      color: #001f3d;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 12px 20px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #003c7a;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .progress-bar {
+      background: #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 20px;
+      width: 100%;
+    }
+
+    .progress {
+      background: linear-gradient(to right, #4caf50, #81c784);
+      height: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Students Enrolled in {{ course.course_name }}</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <td>{{ student.username }}</td>
+          <td>{{ student.email }}</td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress" style="width: {{ student.progress }}%;"></div>
+            </div>
+            <small>{{ student.progress }}%</small>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

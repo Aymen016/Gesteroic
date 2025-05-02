@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Signup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .signup-container {
+            background: #fff;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .signup-container h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #4a90e2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer-text a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Teacher Signup</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Full Name" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <label for="course_id">Select Course:</label>
+            <select name="course_id" required>
+                {% for course in courses %}
+                    <option value="{{ course._id }}">{{ course.course_name }}</option>
+                {% endfor %}
+            </select><br><br>
+
+            <button type="submit">Signup</button>
+        </form>
+        <div class="footer-text">
+            Already have an account? <a href="/teacher_login">Login here</a>
+        </div>
+    </div>
+</body>
+</html>
