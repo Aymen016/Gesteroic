@@ -47,7 +47,10 @@
   ![image](https://github.com/user-attachments/assets/a23bd052-4901-4817-b6ae-1fbc7664345b)
 
 - 🏆 **Earn Certificates**: Receive a certificate upon course completion.
+  ![Aymen_certificate](https://github.com/user-attachments/assets/0234a3f5-4ff9-4021-8783-3dc67cb93bee)
+
 - 📂 **Accessible Content**: Lessons are tailored for children using easy words and concepts.
+![image](https://github.com/user-attachments/assets/2cff5b1c-bf34-45d7-8fe1-47ab1280d97c)
 
 ---
 
