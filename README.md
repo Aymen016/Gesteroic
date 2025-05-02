@@ -41,7 +41,11 @@
   ![image](https://github.com/user-attachments/assets/ef016a9d-d545-4301-bc30-1bc4b142394c)
 
 - 📝 **Take Quizzes**: Reinforce learning with engaging, child-friendly MCQs.
+  ![image](https://github.com/user-attachments/assets/a6cad840-f30d-4641-926e-7c18b5b6c42c)
+
 - 📊 **Track Progress**: See completed lectures and quiz scores.
+  ![image](https://github.com/user-attachments/assets/a23bd052-4901-4817-b6ae-1fbc7664345b)
+
 - 🏆 **Earn Certificates**: Receive a certificate upon course completion.
 - 📂 **Accessible Content**: Lessons are tailored for children using easy words and concepts.
 
