@@ -4,10 +4,7 @@
 
 ## 🌐 Live Preview
 
-🚀 [Visit GESTEROIC (Demo Link)](https://your-deployment-link.com)  
 📽️ [Project Walkthrough Video](https://github.com/user-attachments/assets/5ce321f4-1326-4d82-80eb-98ff36ae12e4)
-
-
 
 ---
 
@@ -30,22 +27,67 @@
 
 ## ✨ Features
 
-### 🎓 Student Panel
-- Register and login
-- Browse available **courses** and **lectures**
-- Watch video content
-- Attempt quizzes and receive instant results
-- **Track progress** with dashboard insights
-- Receive **certificates** upon completion
+## 👨‍🎓 Students
 
-### 👨‍💼 Admin Panel
-- Admin registration and login
-- Add/edit/delete:
-  - Courses
-  - Lectures (with video URLs)
-  - Quizzes
-- View platform stats: total users, total courses, lectures, quizzes
-- Manage teacher assignments
+### 🌟 Features:
+- ✅ **Sign Up & Login**: Create a secure account to begin learning.
+  ![image](https://github.com/user-attachments/assets/91769421-4321-4a89-b9c0-284743f35a3e)
+![image](https://github.com/user-attachments/assets/bd439629-0b7a-4694-b0ba-19d958139447)
+
+- 📚 **View Courses**: Browse and enroll in a variety of sign language-supported courses.
+- 🎥 **Watch Lectures**: Learn using visual sign language videos and simple language.
+- 📝 **Take Quizzes**: Reinforce learning with engaging, child-friendly MCQs.
+- 📊 **Track Progress**: See completed lectures and quiz scores.
+- 🏆 **Earn Certificates**: Receive a certificate upon course completion.
+- 📂 **Accessible Content**: Lessons are tailored for children using easy words and concepts.
+
+---
+
+## 👩‍🏫 Teachers
+
+### 🌟 Features:
+- ✅ **Sign Up & Login**: Secure access to the teacher dashboard.
+- ➕ **Add Courses**: Create new sign language-supported courses with titles and descriptions.
+- 🎬 **Upload Lectures**: Add video lessons with simplified educational content.
+- ❓ **Create Quizzes**: Design custom quizzes with multiple-choice questions.
+- 📈 **View Student Submissions**: Check quiz participation and student understanding.
+- ✏️ **Update or Delete Content**: Manage course content with full control.
+
+---
+
+## 👨‍💼 Admins
+
+### 🌟 Features:
+- ✅ **Secure Admin Login**
+- 📊 **Dashboard Overview**:
+  - Total Students
+  - Total Courses
+  - Total Lectures
+  - Total Quizzes
+- ➕ **Add Courses & Lectures**: Full control to manage educational content.
+- 📁 **Manage Users**: View, update, or remove student and teacher accounts.
+- 🔒 **Content Moderation**: Ensure all uploaded material is appropriate and accessible.
+- 📬 **Monitor Platform Activity**: Oversee learning engagement, quiz results, and course progress.
+
+---
+
+## 📚 Available Courses
+
+### 1. 🇵🇰 National Anthem of Pakistan  
+- **Learn the meaning and message of the national anthem with sign support.**
+- Includes a 5-question quiz with child-friendly options.
+
+### 2. 🇬🇧 English for Kids – Learn with Signs  
+- **Learn English basics with engaging stories, vocabulary, grammar, and more.**
+- 10 Lectures: From alphabets, body parts, and vowels to stories and grammar.
+- Includes a 10-question quiz.
+
+### 3. 💻 Computer Basics – A Beginner’s Guide to the Digital World  
+- **Start your digital journey with simple lessons on computers, emails, internet, and more.**
+- 9 Lectures: From MS Office and internet safety to chatbots and smartphones.
+- Includes a 10-question quiz.
+
+---
 
 
 
