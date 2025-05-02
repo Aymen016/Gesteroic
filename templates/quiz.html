@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Deaf Learning Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Take Quiz</h1>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <form method="post">
+        {% for q in quiz.questions %}
+            <p>{{ q.question }}</p>
+            {% for opt in q.options %}
+                <input type="radio" name="{{ q.id }}" value="{{ opt }}"> {{ opt }}<br>
+            {% endfor %}
+        {% endfor %}
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </div>
+
+</body>
+</html>
