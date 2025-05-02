@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #001f3d, #003366, #004080);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+    }
+
+    .dashboard-container {
+      background: #ffffff;
+      color: #001f3d;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      width: 90%;
+      max-width: 1000px;
+      padding: 60px 40px;
+      text-align: center;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #003f7d;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #004ba0;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #333;
+      margin: 10px 0 30px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin-top: 30px;
+      color: #002244;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
+    }
+
+    li {
+      margin: 12px 0;
+      font-weight: bold;
+      color: #003060;
+    }
+
+    .button-group {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .actions {
+      background: linear-gradient(135deg, #004ba0, #0066cc);
+      padding: 14px 26px;
+      border-radius: 10px;
+      color: white;
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .actions:hover {
+      background: linear-gradient(135deg, #003c7a, #005cb8);
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 60px;
+      color: #999;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2em; }
+      h2 { font-size: 1.5em; }
+      .dashboard-container { padding: 40px 20px; }
+      .actions { font-size: 1em; padding: 12px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Welcome, {{ teacher.name }}</h1>
+
+    <h2>Course: {{ course.course_name }}</h2>
+    <p>Description: {{ course.description }}</p>
+
+    <h3>Course Overview:</h3>
+    <ul>
+      <li>Number of Lectures: <strong>{{ num_lectures }}</strong></li>
+      <li>Number of Students Enrolled: <strong>{{ num_students }}</strong></li>
+    </ul>
+
+    <h3>Actions:</h3>
+    <div class="button-group">
+      <a href="{{ url_for('create_assessment', course_id=course._id) }}" class="actions">Create Assessment</a>
+      <a href="{{ url_for('add_lecture', course_id=course._id) }}" class="actions">Add Lecture</a>
+      <a href="{{ url_for('view_students', course_id=course._id) }}" class="actions">View Enrolled Students</a>
+    </div>
+    
+    
+
+    <div class="footer">
+      <p>© 2025 GESTEROIC. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
