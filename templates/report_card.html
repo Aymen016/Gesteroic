@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Card - {{ student_name }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #916a95, #e774d2); /* Gradient from pink to orange */
+        }
+
+        .certificate-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 50px auto 20px auto;
+        }
+
+        .certificate-bg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .overlay-content h1 {
+            font-size: 40px;
+            position: absolute;
+            top: 130px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .overlay-content h2 {
+            font-size: 28px;
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .overlay-content p {
+            font-size: 20px;
+            position: absolute;
+            top: 260px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4c6ef5;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+
+        /* NEW BOX BELOW CERTIFICATE */
+        .info-box {
+            width: 90%;
+            max-width: 600px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .info-box img {
+            width: 140px;
+            height: 140px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #4c6ef5;
+        }
+
+        .info-box h2 {
+            margin: 10px 0;
+            font-size: 26px;
+            color: #333;
+        }
+
+        .info-box p {
+            font-size: 18px;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* New Gradient for Grade */
+        .info-box .grade {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient from purple to blue */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .back-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .back-btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #4c6ef5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .back-btn:hover {
+            background-color: #3b5bdb;
+        }
+
+        .view-certificate-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 16px;
+            background-color: #6a11cb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .view-certificate-btn:hover {
+            background-color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Certificate Display -->
+    <div class="certificate-wrapper">
+        <img src="{{ url_for('static', filename='images/rep.png') }}" class="certificate-bg" alt="Certificate Background">
+    </div>
+
+    <!-- Box with Info -->
+    <div class="info-box">
+        <img src="{{ profile_pic }}" alt="Profile Picture">
+        <h2>{{ student_name }}</h2>
+        <p><strong>Score:</strong> {{ score|float|round(2) }}%</p>
+        
+        <p><strong>Grade:</strong>
+            {% set score_int = score|int %}
+            {% if score_int >= 90 %}
+                <span class="grade">A+</span>
+            {% elif score_int >= 80 %}
+                <span class="grade">A</span>
+            {% elif score_int >= 70 %}
+                <span class="grade">B</span>
+            {% elif score_int >= 60 %}
+                <span class="grade">C</span>
+            {% elif score_int >= 50 %}
+                <span class="grade">D</span>
+            {% else %}
+                <span class="grade">F</span>
+            {% endif %}
+        </p>
+    </div>
+    <div class="back-container">
+        <a href="{{ url_for('view_certificate', student_name=student_name) }}" class="view-certificate-btn">View Certificate</a>
+    </div>
+    <!-- Buttons -->
+    <div class="back-container">
+        <a href="{{ url_for('student_home') }}" class="back-btn">Return to Dashboard</a>
+    </div>
+    
+    
+</body>
+</html>
