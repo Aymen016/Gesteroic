@@ -11,7 +11,7 @@
 ## 📸 Screenshots
 
 ### 👨‍🏫 Admin Dashboard
-![Admin Dashboard](https://github.com/user-attachments/assets/dfacc28c-29f2-41a7-a54a-e96042aa7322)
+![image](https://github.com/user-attachments/assets/876bf5dc-2532-4f63-8a0b-73d2f0ce0b33)
 
 
 ### 📚 Course and Lectures View
@@ -79,17 +79,26 @@
 
 ### 🌟 Features:
 - ✅ **Secure Admin Login**
+  ![image](https://github.com/user-attachments/assets/5881dd64-c5c0-4a00-a450-854949fa79ee)
+
 - 📊 **Dashboard Overview**:
   - Total Students
   - Total Courses
   - Total Lectures
   - Total Quizzes
-- ➕ **Add Courses**: Create new sign language-supported courses with titles and descriptions.
+    ![image](https://github.com/user-attachments/assets/124b2f48-4de7-48c3-951f-a6a901be2792)
 
-- ➕ **Add Courses & Lectures**: Full control to manage educational content.
+- ➕ **Add Courses**: Create new sign language-supported courses with titles and descriptions.
+![image](https://github.com/user-attachments/assets/11c56b01-85a2-43d8-ae35-a28abf0d701e)
+
 - 📁 **Manage Users**: View, update, or remove student and teacher accounts.
+  ![image](https://github.com/user-attachments/assets/c6829e42-2859-4312-824b-f11e9bfe5e2b)
+
 - 🔒 **Content Moderation**: Ensure all uploaded material is appropriate and accessible.
+  ![image](https://github.com/user-attachments/assets/c9b75f6d-45d9-458a-b9b2-89f67e2dc3e8)
+
 - 📬 **Monitor Platform Activity**: Oversee learning engagement, quiz results, and course progress.
+![image](https://github.com/user-attachments/assets/f9b9170b-800b-4170-855f-3b45f36a659e)
 
 ---
 
