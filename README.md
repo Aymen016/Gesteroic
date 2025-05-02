@@ -35,7 +35,11 @@
 ![image](https://github.com/user-attachments/assets/bd439629-0b7a-4694-b0ba-19d958139447)
 
 - 📚 **View Courses**: Browse and enroll in a variety of sign language-supported courses.
+  ![image](https://github.com/user-attachments/assets/d569b0d2-ba12-4af7-be2c-ffafe67c09dd)
+
 - 🎥 **Watch Lectures**: Learn using visual sign language videos and simple language.
+  ![image](https://github.com/user-attachments/assets/ef016a9d-d545-4301-bc30-1bc4b142394c)
+
 - 📝 **Take Quizzes**: Reinforce learning with engaging, child-friendly MCQs.
 - 📊 **Track Progress**: See completed lectures and quiz scores.
 - 🏆 **Earn Certificates**: Receive a certificate upon course completion.
