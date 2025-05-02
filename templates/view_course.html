@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course['course_name'] }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .description {
+            font-size: 1.2em;
+            margin-top: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #357abd;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .lecture-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .lecture-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lecture-item h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #4a90e2;
+        }
+
+        .lecture-item p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .back-btn {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Sliding image styles */
+        .sliding-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 20px auto;
+            animation: slideIn 2s ease-out;
+        }
+
+        /* Keyframes for sliding animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ course['course_name'] }}</h1>
+            <p class="description">{{ course['description'] }}</p>
+            <!-- Sliding Image inside Header -->
+            <img src="{{ url_for('static', filename='assets/images/eng.png') }}" alt="Course Image" class="sliding-image">
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            {% for lecture in lectures %}
+        <div id="lecture-{{ loop.index }}" class="video-container">
+            <h3>{{ lecture['lecture_title'] }} - Video</h3>
+            <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/{{ lecture['lecture_video_url'].split('/')[-1] }}" 
+    title="{{ lecture['lecture_title'] }}" 
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
+        </div>
+    {% endfor %}
+            
+        </section>
+
+        <div class="back-btn">
+            <a href="{{ url_for('dashboard') }}" class="btn">Back to Dashboard</a>
+        </div>
+    </main>
+</body>
+</html>
