@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Available Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem;
+        }
+        .course-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            padding: 1.5rem;
+            width: 300px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+        .course-card h2 {
+            color: #333;
+        }
+        .course-card p {
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background-color: #357ab7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Available Courses</h1>
+        <p>Browse and enroll in a course below</p>
+    </header>
+
+    <div class="course-container">
+        {% for course in courses %}
+            <div class="course-card">
+                <h2>{{ course['course_name'] }}</h2>
+                <p>{{ course['description'] }}</p>
+                <a href="{{ url_for('enroll', course_id=course['_id']) }}" class="btn">Enroll</a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
