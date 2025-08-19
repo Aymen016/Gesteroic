@@ -150,5 +150,4 @@ This project is licensed under the **MIT License**.
 ## 📬 Contact
 
 - 📧 **Email:** ayemenbaig26@gmail.com  
-- 🌐 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/) *(Update with your actual link)*
 
