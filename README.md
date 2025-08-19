@@ -223,5 +223,5 @@ This project is licensed under the **MIT License**.
 ## 📬 Contact
 
 - 📧 **Email:** ayemenbaig26@gmail.com  
-- 🌐 **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/) 
+- 🌐 **LinkedIn:** [Aymen Baig](https://www.linkedin.com/in/aymen-baig-700a06284/) 
 
