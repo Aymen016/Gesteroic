@@ -4,12 +4,14 @@ from bson import ObjectId
 import gridfs
 import datetime
 import bcrypt
+import os
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"  # Use env variable in real apps
+# Secrets come from environment variables (see .env.example), never from source code.
+app.secret_key = os.environ["SECRET_KEY"]
 
 # MongoDB config
-MONGO_URI = "mongodb+srv://amyhehehehe11:cb6qMqjcGcQy3jcp@gesteroic.erzda6z.mongodb.net/"
+MONGO_URI = os.environ["MONGO_URI"]
 client = MongoClient(MONGO_URI)
 db = client['gesteroic']
 
@@ -742,5 +744,5 @@ def view_teachers():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=os.environ.get("FLASK_DEBUG") == "1")
 
