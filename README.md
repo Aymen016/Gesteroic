@@ -154,8 +154,8 @@ gesteroic/
 │   ├── quizzes.html
 │   └── admin/
 │
-├── app.py
-├── db_config.py
+├── main.py
+├── .env.example
 ├── requirements.txt
 └── README.md
 ```
@@ -165,7 +165,7 @@ gesteroic/
 
 ### 1. Clone the Repo
 ```bash
-git clone https://github.com/your-username/gesteroic.git
+git clone https://github.com/Aymen016/Gesteroic.git
 cd gesteroic
 ```
 ### 2. Create Virtual Environment
@@ -178,13 +178,17 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ### 4. Set Up MongoDB
-Create a MongoDB Atlas account and set your connection string in app.py:
-```python
-client = MongoClient("your_mongodb_uri")
+Create a MongoDB Atlas account, then copy `.env.example` to `.env` and fill in your values.
+Never commit `.env` or put credentials in source code.
+```bash
+cp .env.example .env
+# edit .env: set MONGO_URI and SECRET_KEY
+# generate a secret key with: python generate.py
 ```
+Load the variables before running (for example `export $(grep -v '^#' .env | xargs)` on Linux/macOS), or set them in your hosting provider's dashboard.
 ### 5. Run the App
 ```bash
-python app.py
+python main.py
 ```
 Then open http://localhost:5000 in your browser.
 
